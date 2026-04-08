@@ -81,6 +81,9 @@ export function ChargebackApp({ checkoutUrl }: { checkoutUrl?: string }) {
             <p className="text-xs uppercase tracking-[0.25em] text-sky-300">Dispute intake</p>
             <h1 className="mt-2 text-3xl font-semibold text-white">Chargeback Brief builder</h1>
             <p className="mt-2 text-sm text-slate-300">Built for Shopify merchants that need a rebuttal packet fast.</p>
+            <p className="mt-3 max-w-xl text-sm leading-6 text-slate-400">
+              Use the demo to see the full workflow, then swap in your own order facts. You should know what evidence is missing before you burn time on submission.
+            </p>
           </div>
           <div className="flex gap-2">
             <button
@@ -197,6 +200,13 @@ export function ChargebackApp({ checkoutUrl }: { checkoutUrl?: string }) {
             <p className="mt-2 max-w-2xl text-sm text-slate-300">Rules-based output. No external AI API. Clean enough to paste into your processor and tighten for edge cases.</p>
           </div>
           <div className="flex flex-wrap gap-3">
+            <button
+              type="button"
+              onClick={() => setForm(demoIntake)}
+              className="rounded-full border border-sky-400/30 px-4 py-2 text-sm font-semibold text-sky-200 transition hover:border-sky-300 hover:bg-sky-400/10"
+            >
+              Try live demo data
+            </button>
             <button
               type="button"
               onClick={copyBrief}

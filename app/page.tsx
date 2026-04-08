@@ -1,5 +1,18 @@
 import Link from 'next/link';
 
+const painPoints = [
+  'Friendly fraud is eating margin on otherwise healthy orders',
+  'Dispute evidence lives across Shopify, email, tracking, and helpdesk tabs',
+  'Teams keep rewriting the same rebuttal from scratch under deadline pressure'
+];
+
+const trafficAngles = [
+  'Chargeback response template for Shopify stores',
+  'How to respond to product not received chargebacks',
+  'Evidence checklist for fraudulent transaction disputes',
+  'Subscription canceled dispute response workflow'
+];
+
 const pricing = [
   {
     name: 'Starter',
@@ -50,6 +63,7 @@ export default function LandingPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-300">Chargeback Brief</p>
           </div>
           <nav className="flex items-center gap-5 text-sm text-slate-300">
+            <a href="#how-it-works">How it works</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
             <Link href="/app" className="rounded-full bg-white px-4 py-2 font-semibold text-slate-950">
@@ -70,6 +84,14 @@ export default function LandingPage() {
               Built for Shopify brands doing real volume without a fraud ops team. Stop digging through tracking emails, refund policies,
               and support threads every time a dispute hits.
             </p>
+            <ul className="mt-6 space-y-3 text-sm text-slate-200">
+              {painPoints.map((point) => (
+                <li key={point} className="flex gap-3">
+                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-emerald-300" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/app" className="rounded-full bg-sky-400 px-6 py-3 font-semibold text-slate-950 transition hover:opacity-90">
                 Build your first brief
@@ -115,7 +137,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="grid gap-6 lg:grid-cols-3">
+        <section id="how-it-works" className="grid gap-6 lg:grid-cols-3">
           {[
             {
               title: 'Pain tied to lost cash',
@@ -167,7 +189,26 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="faq" className="grid gap-4 rounded-[32px] border border-white/10 bg-white/[0.04] p-6 lg:grid-cols-2 lg:p-8">
+        <section className="mt-16 rounded-[32px] border border-white/10 bg-white/[0.04] p-6 lg:p-8">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-sky-300">Search hooks</p>
+              <h2 className="mt-3 text-4xl font-semibold text-white">High-intent traffic starts with the exact pain merchants search for.</h2>
+              <p className="mt-4 text-lg text-slate-300">
+                These are the angles this product should rank, post, and pitch against because they map directly to active chargeback pain.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {trafficAngles.map((angle) => (
+                <div key={angle} className="rounded-3xl border border-white/10 bg-slate-950/40 p-5 text-sm text-slate-200">
+                  {angle}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="mt-16 grid gap-4 rounded-[32px] border border-white/10 bg-white/[0.04] p-6 lg:grid-cols-2 lg:p-8">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-sky-300">FAQ</p>
             <h2 className="mt-3 text-4xl font-semibold text-white">What merchants are going to ask right away.</h2>
