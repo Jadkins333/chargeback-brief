@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jadkins333.github.io/chargeback-brief/sitemap.xml
