@@ -62,11 +62,11 @@ export default function LandingPage() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-300">Chargeback Brief</p>
           </div>
-          <nav className="flex items-center gap-5 text-sm text-slate-300">
-            <a href="#how-it-works">How it works</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#faq">FAQ</a>
-            <Link href="/app" className="rounded-full bg-white px-4 py-2 font-semibold text-slate-950">
+          <nav className="flex flex-wrap items-center gap-3 text-sm text-slate-300 sm:gap-5">
+            <a href="#how-it-works" className="whitespace-nowrap">How it works</a>
+            <a href="#pricing" className="whitespace-nowrap">Pricing</a>
+            <a href="#faq" className="whitespace-nowrap">FAQ</a>
+            <Link href="/app" className="whitespace-nowrap rounded-full bg-white px-4 py-2 font-semibold text-slate-950">
               Open app
             </Link>
           </nav>
@@ -184,6 +184,16 @@ export default function LandingPage() {
                     </li>
                   ))}
                 </ul>
+                <Link
+                  href="/app"
+                  className={`mt-6 block rounded-full px-6 py-3 text-center font-semibold transition hover:opacity-90 ${
+                    plan.featured
+                      ? 'bg-sky-400 text-slate-950 shadow-lg shadow-sky-400/25'
+                      : 'border border-white/10 bg-white/5 text-white hover:bg-white/10'
+                  }`}
+                >
+                  Get started
+                </Link>
               </div>
             ))}
           </div>
@@ -239,6 +249,13 @@ export default function LandingPage() {
           </div>
         </section>
       </div>
+
+      <footer className="mx-auto mt-20 max-w-7xl border-t border-white/10 px-6 py-8 lg:px-8">
+        <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-slate-400">
+          <p>&copy; {new Date().getFullYear()} Chargeback Brief. All rights reserved.</p>
+          <a href="mailto:jonathenadkins@gmail.com" className="transition hover:text-white">jonathenadkins@gmail.com</a>
+        </div>
+      </footer>
     </main>
   );
 }

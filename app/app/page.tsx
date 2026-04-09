@@ -16,6 +16,13 @@ export default function AppPage() {
         </Link>
       </div>
       <ChargebackApp checkoutUrl={checkoutUrl} />
+
+      <footer className="mx-auto mt-12 max-w-7xl border-t border-white/10 px-6 py-8 lg:px-8">
+        <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-slate-400">
+          <p>&copy; {new Date().getFullYear()} Chargeback Brief. All rights reserved.</p>
+          <a href="mailto:jonathenadkins@gmail.com" className="transition hover:text-white">jonathenadkins@gmail.com</a>
+        </div>
+      </footer>
     </main>
   );
 }
