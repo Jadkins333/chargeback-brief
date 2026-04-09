@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  body {
+    width: 1200px;
+    height: 630px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow: hidden;
+    background: #18181b;
+  }
+
+  .container {
+    width: 1200px;
+    height: 630px;
+    background: linear-gradient(145deg, #18181b 0%, #1e293b 50%, #18181b 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle grid pattern overlay */
+  .container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+
+  /* Green glow accent top-right */
+  .glow-1 {
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Subtle green glow bottom-left */
+  .glow-2 {
+    position: absolute;
+    bottom: -150px;
+    left: -100px;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 100px;
+    padding: 8px 20px;
+    margin-bottom: 32px;
+  }
+
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  }
+
+  .badge-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: #10b981;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .headline {
+    font-size: 72px;
+    font-weight: 800;
+    color: #f4f4f5;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+  }
+
+  .headline .accent {
+    background: linear-gradient(135deg, #10b981, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .subline {
+    font-size: 24px;
+    font-weight: 400;
+    color: #a1a1aa;
+    line-height: 1.5;
+    max-width: 700px;
+  }
+
+  /* Decorative element - right side */
+  .deco {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0.6;
+  }
+
+  .deco-bar {
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.4), rgba(16, 185, 129, 0.05));
+  }
+
+  .deco-bar:nth-child(1) { width: 160px; }
+  .deco-bar:nth-child(2) { width: 120px; }
+  .deco-bar:nth-child(3) { width: 180px; }
+  .deco-bar:nth-child(4) { width: 100px; }
+  .deco-bar:nth-child(5) { width: 140px; }
+
+  /* Bottom border accent */
+  .bottom-accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #10b981, transparent);
+  }
+
+  /* Shield icon */
+  .shield {
+    position: absolute;
+    right: 80px;
+    bottom: 60px;
+    z-index: 2;
+    opacity: 0.12;
+  }
+
+  .shield svg {
+    width: 200px;
+    height: 200px;
+    fill: #10b981;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+
+    <div class="content">
+      <div class="badge">
+        <div class="badge-dot"></div>
+        <span class="badge-text">Shopify Dispute Tool</span>
+      </div>
+      <h1 class="headline">Chargeback<br><span class="accent">Brief</span></h1>
+      <p class="subline">Turn messy chargeback evidence into a rebuttal brief in under 5 minutes.</p>
+    </div>
+
+    <div class="deco">
+      <div class="deco-bar"></div>
+      <div class="deco-bar"></div>
+      <div class="deco-bar"></div>
+      <div class="deco-bar"></div>
+      <div class="deco-bar"></div>
+    </div>
+
+    <!-- Shield watermark -->
+    <div class="shield">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm-1 14l-4-4 1.41-1.41L11 13.17l5.59-5.59L18 9l-7 7z"/>
+      </svg>
+    </div>
+
+    <div class="bottom-accent"></div>
+  </div>
+</body>
+</html>
