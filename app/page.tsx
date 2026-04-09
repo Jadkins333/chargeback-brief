@@ -18,20 +18,23 @@ const pricing = [
     name: 'Starter',
     price: '$29/mo',
     detail: 'Up to 10 disputes per month',
-    bullets: ['Rules-based evidence checklist', 'Copy-ready rebuttal draft', 'Built for lean Shopify teams']
+    bullets: ['Rules-based evidence checklist', 'Copy-ready rebuttal draft', 'Built for lean Shopify teams'],
+    checkoutUrl: 'https://buy.stripe.com/4gM8wR4HB0JZbez2PAbMQ00'
   },
   {
     name: 'Growth',
     price: '$79/mo',
     detail: 'Up to 50 disputes per month',
     bullets: ['Everything in Starter', 'Priority support queue', 'Best fit for stores with weekly disputes'],
-    featured: true
+    featured: true,
+    checkoutUrl: 'https://buy.stripe.com/9B6bJ3fmf2S7aav3TEbMQ02'
   },
   {
     name: 'Concierge add-on',
     price: '$19/dispute',
     detail: 'Manual review layer for edge cases',
-    bullets: ['Human QA before submission', 'Use when the bank asks for more', 'Good bridge before deeper automation']
+    bullets: ['Human QA before submission', 'Use when the bank asks for more', 'Good bridge before deeper automation'],
+    checkoutUrl: 'mailto:jonathenadkins@gmail.com?subject=Concierge%20add-on%20inquiry'
   }
 ];
 
@@ -184,8 +187,10 @@ export default function LandingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/app"
+                <a
+                  href={plan.checkoutUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`mt-6 block rounded-full px-6 py-3 text-center font-semibold transition hover:opacity-90 ${
                     plan.featured
                       ? 'bg-sky-400 text-slate-950 shadow-lg shadow-sky-400/25'
@@ -193,7 +198,7 @@ export default function LandingPage() {
                   }`}
                 >
                   Get started
-                </Link>
+                </a>
               </div>
             ))}
           </div>
