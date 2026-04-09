@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/chargeback-brief/og.png',
+        url: '/og.png',
         width: 1200,
         height: 630,
         alt: 'Chargeback Brief — rebuttal packets for Shopify merchants'
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Chargeback Brief',
     description: 'Turn messy chargeback evidence into a rebuttal brief in under 5 minutes.',
-    images: ['/chargeback-brief/og.png']
+    images: ['/og.png']
   }
 };
 
