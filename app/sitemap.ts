@@ -15,6 +15,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8
+    },
+    {
+      url: 'https://jadkins333.github.io/chargeback-brief/blog/friendly-fraud-shopify/',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://jadkins333.github.io/chargeback-brief/blog/chargeback-win-rate/',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7
     }
   ];
 }

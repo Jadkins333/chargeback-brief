@@ -336,6 +336,44 @@ export default function GuidePage() {
           </div>
         </section>
 
+        {/* Related reading */}
+        <section className="mt-16">
+          <p className="text-xs uppercase tracking-[0.25em] text-sky-300">Related reading</p>
+          <h2 className="mt-3 text-3xl font-semibold text-white">
+            Keep learning about chargeback defense
+          </h2>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <Link
+              href="/chargeback-brief/blog/friendly-fraud-shopify/"
+              className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 transition hover:bg-white/[0.07]"
+            >
+              <p className="text-sm font-semibold uppercase tracking-wider text-sky-200">
+                Blog
+              </p>
+              <h3 className="mt-3 text-lg font-semibold text-white">
+                Friendly Fraud on Shopify: What It Really Costs and How to Fight Back
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-slate-300">
+                Learn why friendly fraud is the fastest-growing chargeback category and what Shopify merchants can do about it.
+              </p>
+            </Link>
+            <Link
+              href="/chargeback-brief/blog/chargeback-win-rate/"
+              className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 transition hover:bg-white/[0.07]"
+            >
+              <p className="text-sm font-semibold uppercase tracking-wider text-sky-200">
+                Blog
+              </p>
+              <h3 className="mt-3 text-lg font-semibold text-white">
+                How to Improve Your Chargeback Win Rate: Evidence That Actually Works
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-slate-300">
+                The difference between a 20% and 60% win rate comes down to evidence quality. Here's what to fix.
+              </p>
+            </Link>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="mt-16 border-t border-white/10 pt-8 text-center text-sm text-slate-400">
           <p>© {new Date().getFullYear()} Chargeback Brief. All rights reserved.</p>
