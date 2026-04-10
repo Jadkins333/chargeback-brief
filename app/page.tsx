@@ -69,6 +69,7 @@ export default function LandingPage() {
             <a href="#how-it-works" className="whitespace-nowrap">How it works</a>
             <a href="#pricing" className="whitespace-nowrap">Pricing</a>
             <a href="#faq" className="whitespace-nowrap">FAQ</a>
+            <Link href="/guide" className="whitespace-nowrap">Free guide</Link>
             <Link href="/app" className="whitespace-nowrap rounded-full bg-white px-4 py-2 font-semibold text-slate-950">
               Open app
             </Link>
