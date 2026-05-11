@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Chargeback Brief',
-  description: 'Turn chargeback evidence into a ready-to-submit brief in under 5 minutes.',
+  title: 'Chargeback Brief \u2014 Shopify chargeback response builder',
+  description: 'Turn messy Shopify chargeback evidence into a ready-to-submit rebuttal brief in under 5 minutes. Free browser tool with paid tiers for merchants handling repeat disputes.',
   metadataBase: new URL('https://jadkins333.github.io/chargeback-brief/'),
   openGraph: {
-    title: 'Chargeback Brief',
+    title: 'Chargeback Brief \u2014 Shopify chargeback response builder',
     description: 'Turn messy chargeback evidence into a rebuttal brief in under 5 minutes.',
     url: 'https://jadkins333.github.io/chargeback-brief/',
     siteName: 'Chargeback Brief',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chargeback Brief',
+    title: 'Chargeback Brief \u2014 Shopify chargeback response builder',
     description: 'Turn messy chargeback evidence into a rebuttal brief in under 5 minutes.',
     images: ['/og.png']
   }
